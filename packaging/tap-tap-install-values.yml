@@ -1,3 +1,7 @@
+#@ load("@ytt:data", "data")
+#@ load("@ytt:yaml", "yaml")
+
+---
 apiVersion: v1
 kind: Secret
 metadata:
