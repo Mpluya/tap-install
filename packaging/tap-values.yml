@@ -25,6 +25,10 @@ tap:
   learningcenter:
     ingressDomain: cvsdr.tapsme.org
     ingressClass: contour
+  contour:
+    envoy:
+      service:
+        type: LoadBalancer
   tap_gui:
     service_type: ClusterIP
     ingressEnabled: "true"
@@ -44,7 +48,3 @@ tap:
         baseUrl: http://tap-gui.cvsdr.tapsme.org
         cors:
           origin: http://tap-gui.cvsdr.tapsme.org
-  contour:
-    envoy:
-      service:
-        type: LoadBalancer
