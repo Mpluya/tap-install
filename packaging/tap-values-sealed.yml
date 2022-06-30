@@ -9,7 +9,7 @@
   "spec": {
     "template": {
       "metadata": {
-        "name": "tap-tap-install-values-too",
+        "name": "tap-tap-install-values",
         "namespace": "tap-install",
         "creationTimestamp": null
       },
