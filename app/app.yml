@@ -13,7 +13,7 @@ spec:
       url: https://github.com/Mpluya/tap-install
       ref: origin/main
       subPath: packaging
-
+      secretRef: tap-install-gitops-ssh
   template:
   - ytt: {}
 
