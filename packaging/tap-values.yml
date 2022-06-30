@@ -3,50 +3,43 @@
 tap:
   profile: full
   ceip_policy_disclosed: true
-
   buildservice:
-    kp_default_repository: "tapsme/build-service"
-    kp_default_repository_username: "tapsme"
-    kp_default_repository_password: "xxxxxxx"
-    tanzunet_username: "poo@vmware.com"
-    tanzunet_password: "xxxx"
-
+    kp_default_repository: tapsme/build-service
+    kp_default_repository_username: tapsme
+    kp_default_repository_password: xxxxxxx
+    tanzunet_username: poo@vmware.com
+    tanzunet_password: xxxx
   supply_chain: basic
-
   metadata_store:
     ingress_enabled: "true"
-    ingress_domain: "cvsdr.tapsme.org"
-    app_service_type: "ClusterIP"  #! recommended if ingress is enabled
-
+    ingress_domain: cvsdr.tapsme.org
+    app_service_type: ClusterIP
   cnrs:
     domain_name: cvsdr.tapsme.org
-
   ootb_supply_chain_basic:
     registry:
-      server: "index.docker.io"
-      repository: "tapsme"
+      server: index.docker.io
+      repository: tapsme
     gitops:
       ssh_secret: ""
-
   learningcenter:
-    ingressDomain: "cvsdr.tapsme.org"
+    ingressDomain: cvsdr.tapsme.org
     ingressClass: contour
-
   tap_gui:
     service_type: ClusterIP
     ingressEnabled: "true"
-    ingressDomain: "cvsdr.tapsme.org"
+    ingressDomain: cvsdr.tapsme.org
     app_config:
       app:
         baseUrl: http://tap-gui.cvsdr.tapsme.org
       integrations:
-        github: #! Other integrations available see NOTE below
-          - host: github.com
-            token: xxxxxx
+        github:
+        - host: github.com
+          token: xxxxxx
       catalog:
         locations:
-          - type: url
-            target: https://github.com/Mpluya/tap-gui-catalog/blob/main/catalog-info.yaml
+        - type: url
+          target: https://github.com/Mpluya/tap-gui-catalog/blob/main/catalog-info.yaml
       backend:
         baseUrl: http://tap-gui.cvsdr.tapsme.org
         cors:
