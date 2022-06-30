@@ -16,7 +16,7 @@ tap:
   metadata_store:
     ingress_enabled: "true"
     ingress_domain: "cvsdr.tapsme.org"
-    app_service_type: "ClusterIP"  # recommended if ingress is enabled
+    app_service_type: "ClusterIP"  #! recommended if ingress is enabled
 
   cnrs:
     domain_name: cvsdr.tapsme.org
@@ -40,7 +40,7 @@ tap:
       app:
         baseUrl: http://tap-gui.cvsdr.tapsme.org
       integrations:
-        github: # Other integrations available see NOTE below
+        github: #! Other integrations available see NOTE below
           - host: github.com
             token: xxxxxx
       catalog:
