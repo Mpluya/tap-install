@@ -33,3 +33,4 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: tap-install-gitops-sa
+  namespace: tap-install

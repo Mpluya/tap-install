@@ -10,10 +10,11 @@ spec:
   serviceAccountName: tap-install-gitops-sa
   fetch:
   - git:
-      url: https://github.com/Mpluya/tap-install
+      url: ssh://git@github.com/Mpluya/tap-install
       ref: origin/main
       subPath: packaging
-      secretRef: tap-install-gitops-ssh
+      secretRef: 
+        name: tap-install-gitops-ssh
   template:
   - ytt: {}
 
