@@ -9,3 +9,4 @@ items:
     fetch:
       imgpkgBundle:
         image: index.docker.io/tapsme/tap-packages:1.1.0
+        secretRef: tap-install-gitops-regcred
