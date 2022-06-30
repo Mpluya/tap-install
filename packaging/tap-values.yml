@@ -25,7 +25,7 @@ tap:
   learningcenter:
     ingressDomain: cvsdr.tapsme.org
     ingressClass: contour
-  contour:
+    contour:
     envoy:
       service:
         type: LoadBalancer
@@ -33,18 +33,3 @@ tap:
     service_type: ClusterIP
     ingressEnabled: "true"
     ingressDomain: cvsdr.tapsme.org
-    app_config:
-      app:
-        baseUrl: http://tap-gui.cvsdr.tapsme.org
-      integrations:
-        github:
-        - host: github.com
-          token: xxxxxx
-      catalog:
-        locations:
-        - type: url
-          target: https%3A%2F%2Fgithub.com%2FMpluya%2Ftap-gui-catalog%2Fblob%2Fmain%2Fcatalog-info.yaml
-      backend:
-        baseUrl: http%3A%2F%2Ftap-gui.cvsdr.tapsme.org
-        cors:
-          origin: http%3A%2F%2Ftap-gui.cvsdr.tapsme.org
