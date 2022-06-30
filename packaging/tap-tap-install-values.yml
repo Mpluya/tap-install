@@ -8,6 +8,6 @@ metadata:
   name: tap-tap-install-values
   namespace: tap-install
 type: Opaque
-data:
+stringData:
   tap-values.yaml: #@ yaml.encode(data.values.tap)
 
