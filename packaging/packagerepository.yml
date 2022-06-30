@@ -1,0 +1,11 @@
+apiVersion: v1
+items:
+- apiVersion: packaging.carvel.dev/v1alpha1
+  kind: PackageRepository
+  metadata:
+    name: tanzu-tap-repository
+    namespace: tap-install
+  spec:
+    fetch:
+      imgpkgBundle:
+        image: index.docker.io/tapsme/tap-packages:1.1.0
