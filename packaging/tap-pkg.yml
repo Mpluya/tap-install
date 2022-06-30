@@ -1,0 +1,15 @@
+apiVersion: packaging.carvel.dev/v1alpha1
+kind: PackageInstall
+metadata:
+  name: tap
+  namespace: tap-install
+spec:
+  packageRef:
+    refName: tap.tanzu.vmware.com
+    versionSelection:
+      constraints: 1.1.0
+      prereleases: {}
+  serviceAccountName: tap-tap-install-sa
+  values:
+  - secretRef:
+      name: tap-tap-install-values
