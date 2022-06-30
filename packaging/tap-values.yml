@@ -43,8 +43,8 @@ tap:
       catalog:
         locations:
         - type: url
-          target: https://github.com/Mpluya/tap-gui-catalog/blob/main/catalog-info.yaml
+          target: https%3A%2F%2Fgithub.com%2FMpluya%2Ftap-gui-catalog%2Fblob%2Fmain%2Fcatalog-info.yaml
       backend:
-        baseUrl: http://tap-gui.cvsdr.tapsme.org
+        baseUrl: http%3A%2F%2Ftap-gui.cvsdr.tapsme.org
         cors:
-          origin: http://tap-gui.cvsdr.tapsme.org
+          origin: http%3A%2F%2Ftap-gui.cvsdr.tapsme.org
