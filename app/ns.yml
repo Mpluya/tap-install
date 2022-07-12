@@ -1,6 +1,4 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  annotations:
-    kapp.k14s.io/change-group: "tap-ns"
   name: tap-install

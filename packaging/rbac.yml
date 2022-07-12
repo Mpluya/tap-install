@@ -3,7 +3,6 @@ kind: ServiceAccount
 metadata:
   annotations:
     kapp.k14s.io/change-group: "tap-packageinstall-setup"
-    kapp.k14s.io/change-rule.create-order: "upsert after upserting tap-ns"
   name: tap-tap-install-sa
   namespace: tap-install
 ---
@@ -12,7 +11,6 @@ kind: ClusterRole
 metadata:
   annotations:
     kapp.k14s.io/change-group: "tap-packageinstall-setup"
-    kapp.k14s.io/change-rule.create-order: "upsert after upserting tap-ns"
   name: tap-tap-install-cluster-role
 rules:
 - apiGroups:
@@ -27,7 +25,6 @@ kind: ClusterRoleBinding
 metadata:
   annotations:
     kapp.k14s.io/change-group: "tap-packageinstall-setup"
-    kapp.k14s.io/change-rule.create-order: "upsert after upserting tap-ns"
   name: tap-tap-install-cluster-rolebinding
 roleRef:
   apiGroup: rbac.authorization.k8s.io
