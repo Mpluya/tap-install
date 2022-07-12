@@ -1,0 +1,19 @@
+apiVersion: kappctrl.k14s.io/v1alpha1
+kind: App
+metadata:
+  name: post-tap-install-gitops
+  namespace: tap-install
+spec:
+  serviceAccountName: tap-install-gitops-sa
+  fetch:
+  - git:
+      url: ssh://git@github.com/Mpluya/tap-install
+      ref: origin/main
+      subPath: post-packaging
+      secretRef: 
+        name: tap-install-gitops-ssh
+  template:
+  - ytt: {}
+
+  deploy:
+  - kapp: {}
