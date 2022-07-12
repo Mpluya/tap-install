@@ -1,0 +1,23 @@
+{
+  "kind": "SealedSecret",
+  "apiVersion": "bitnami.com/v1alpha1",
+  "metadata": {
+    "name": "tap-install-gitops-ssh",
+    "namespace": "tap-install",
+    "creationTimestamp": null
+  },
+  "spec": {
+    "template": {
+      "metadata": {
+        "name": "tap-install-gitops-ssh",
+        "namespace": "tap-install",
+        "creationTimestamp": null
+      },
+      "data": null
+    },
+    "encryptedData": {
+      "ssh-knownhosts": "AgCFgPUcpCtCQvpyBBb3nFws/+hzW2BRNjUNoQWPVUDyjzhNJt0qhuy2fLMy+JrIJG5dt6i2wgqXzLeW6GIQNVJFtOsfKMtFzcfxugZdZxWIP0DNAyJmNEzCclff15sFLni4aOYdDc5xos0sZgRJWwqzDh2e0SrcChXnIJoiI+M2tIcFJQsCnFw4xyMOHWEbMhYb61+TrLn88HVGopHWoGAR0wmG9mg1fy1dfoCLZWufFE/h1n20GUFR6o/5uwX1q9BbwyCyNmHLISJ6ARZxwSm4pHAkg0vmFQaVcqgg05x2TtxT/wkYuxQORLPbj+zyhGf2vI/ybRJxgyVwK+D4t1zDPR2xNK2mG957lU0W7MlX5cw/wAxAFIrm11o9a5sQYIKcOJCN7av180ThxV+uv5pnVEbNnl8Z9B2VjcW1GjTEWfpWJuqZxE0icHGswvAW+i4f9BG/HoAOXe3a3nxsd4lRRTJr2aMtMpagIBDMW8mo9vB+qWmSIDt9nM4pSp3qJxk+3ZJmPi8wxhgZ2CW1rfR9gbirMMDRfd25Ak4lkS3+PJ793+H82F7DiDKs9IlRIDRu2oPNcynC3K6BeYnsZfGGEXXa8K351fJpBazWFCSOAgkmd/1LkRPl2L1//jfA8k2lQUelabCJzEWeCSnyCj2GAYjjJa2WsfQLuS7pVYlR8oukeM181CXjUhL4+rZoMstE22fQKcVEu65b7bAViYGSHIw3T6yT9MlVbWkXuWj6WkILkX/eMJLwnKACHR3rpNUVlu1ZuDsbTBbSYJh7Gyl4B4CYGA4+bsQ/zEtrjX4F9ODfQqkz5wWlTj2jS7cPJ9W0Z/jdUM/dRCN3vjG0XX53pBamYzXW75igEyEOeE8rpsB9XOT8yExGNGX1iUD7MhLaPv2GsTi4RyLUdGyTIieZ2WF8hyrD/9WajteE8wGYrpAHpKCXaqmCEDWqnLs995/aiRmj0oHB9WTx6bXqR7cmAnfyNwKUK0FSRksVoGa4+qFcBMBlJh00BsyykLrq5HwB2S/sDT4/zgTsh/EDUrzvN+p9vItalWERjmbfooZo7W+E9Bm8wVtgp92BCKi1dNQZGkKAd6nIYRDh1feFg3Slmirmwwv7bopjuV6BrwyDEJwLHxfLEFvVbmUOt0ABlYihQj1G70HxdbImIZ/vshyUy6xeCRVYlqNWEJbnzFs9MCozfJL8lxn8tfb9A7L+VTwnYAAXM99JAAIjpTZulV2Ounhp15Nl0TXgKfg7+s7TYGw1y8t8E45kgDR2samg8dX3bEgXn+cHaX4ficW59d1NEXJb2o2PAweTH9QlesaHjmlIVbJmj52gQrmeVACy17oJiH+PnBYhrbAYAL69AeydqXK+Apawa88/PYET7JI+3fy9zoo+CF0YWFvygaMwmn4ljlIXsZrhxowfuSBZQYQOJKXVM9UxLVFcu+LOljG2oEEZRTjZ59LRFzNjyiPW+ZYBKx7/N+vc+dEME8z8Qspt7BAq/twKP2zz4kFAUHJbzZ99AZEGxeK/Ugj4HKQLuYlb/zQ8dfIkTZV1v/zsCkaiDgsMgRyAlntmNbdbbS6+TQ==",
+      "ssh-privatekey": "AgBr/ArnI2cD6uRl8RV7EOQtCS1JVw6W5POrv+0KDyt3Hg7ystxucVyN13vPzzyWEASv21bpQjTmUo/aLkR5n4g3whFGoiLJ/g7fSztjqat0NRFPWgxdRRtP6tAgS+UnwYdSzQkT7jhLbW/dVcKVdh6U0aXKN/klY4BYzPvBLGlL44L5ByU83AxlU+6FNxbyjE66Joy7uYCV0QFIIHGaEhgzAS0g/29YXXI/KxoKnM57C3cdmZt5Z5ZNwqSM+LTX2+Gk8wQTCra5X70QoFVR2IbSTsDNpNMcFaN11fjiuhJivEWlRz81UK5dsXL3BLn1AMzavayj+1vPqG1kxucZrcqORDd7qnwbx+Wj8Kknh1ab9W7uJl4Ql9CjTWRKPwiWMpKViV8jOG6puW5HfvTiIRrBc0lZx0rjFyxbaa3ci2/NbAo9ATfQbeIPDqMY8DyEKDWeU+U/m1EWF30fkB2GSk9vM4n0RCRXkXn5T0dd1j6W3A45ZeMBdwvqSEuGM8lF/SMSiDVQ3n5xgMbDTpFVDuygjTou/5NA4wcWBELZ6hnL1EYRyTZHWTcL9fRDgN+tq/GdzKq3h0RzR6fs5n6jnqcQKc/T3Hp6yglBHeKICoIJEOkht3keeo1KBn+kwsXe/wXJWxR38zeBaV9K5/x2A5CvrVMW5wg+5NbVjE0obc3809faZJWmYb4HSyDR3/e0GwBTL79jwgqVopSklc0Y3NNKi86irervx+Tq97uANiNe2ZBL10fxMJoBcLtBuXmrq8IdkgtJykZw3nK0iMKpfxMaiSHUtUF04/nB21RZGBixT6jAwb9KsfKcn3JEB2qX+tDaecO/G1xqcc6xDUR4I7Q1qZXpR8xVDAu9bEcZbJl8xgww4f0nP9AyaGxX5F1Pi8PyyQkxsHjJzoGBr+cYH4g7MPjmg83uROXq7OSKuoS6PvtfgGQ+DpcF8vOS7ZBYi7HXHBRwtSIu1owJW7H/Bu8BbwdcaF+KAKTuBuN8gL53KRzfYG7CRz7JWnd+LYj1wBnU40Q4p5yJSjgdJMd0oAW9KZpRtaz0JlNpUxjAnDWgOBlpRLFVDcWktQKBM0ap7YertFWJtLcWMqhRt26PkiZNdfNT7jbKxkfSNGu8EBRcaZzW3dlLkx2k/gOofIMnh6+SmOCi2N4haMkYD6XqfCcrWMm5dTVE046AH0LMpug2nK8VclD2/ir4qu757kfXWKR8HtQ="
+    }
+  }
+}
