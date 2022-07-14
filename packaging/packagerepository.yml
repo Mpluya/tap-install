@@ -9,6 +9,6 @@ metadata:
 spec:
   fetch:
     imgpkgBundle:
-      image: index.docker.io/tapsme/tap-packages:1.2.0
+      image: index.docker.io/tapsme/tap-packages:1.1.2
       secretRef: 
         name: tap-install-gitops-regcred
