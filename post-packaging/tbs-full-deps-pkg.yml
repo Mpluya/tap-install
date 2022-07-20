@@ -1,10 +1,6 @@
 apiVersion: packaging.carvel.dev/v1alpha1
 kind: PackageInstall
 metadata:
-  annotations:
-    kapp.k14s.io/change-rule.create-order: "upsert after upserting tap-packageinstall-setup"
-    kapp.k14s.io/change-rule.delete-order: "delete before deleting tap-packageinstall-setup"
-    packaging.carvel.dev/downgradable: ""
   name: full-tbs-deps
   namespace: tap-install
 spec:
