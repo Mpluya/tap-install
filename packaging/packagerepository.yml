@@ -12,3 +12,4 @@ spec:
       image: index.docker.io/tapsme/tap-packages:1.2.0
       secretRef: 
         name: tap-registry
+        namespace: tap-install
