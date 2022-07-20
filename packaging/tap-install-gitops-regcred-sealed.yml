@@ -2,22 +2,22 @@
   "kind": "SealedSecret",
   "apiVersion": "bitnami.com/v1alpha1",
   "metadata": {
-    "name": "tap-install-gitops-regcred",
-    "namespace": "tap-install",
+    "name": "tap-registry",
+    "namespace": "default",
     "creationTimestamp": null
   },
   "spec": {
     "template": {
       "metadata": {
-        "name": "tap-install-gitops-regcred",
-        "namespace": "tap-install",
+        "name": "tap-registry",
+        "namespace": "default",
         "creationTimestamp": null
       },
       "type": "kubernetes.io/dockerconfigjson",
       "data": null
     },
     "encryptedData": {
-      ".dockerconfigjson": "AgA3TonHNHk3IrDAkrd0tGTKokp4sKrxaDHwZhEKB+cfyp36QUuCL2z6xKhj1+hqe7kin106KMmczZUWxzireBRPsRfUsPIfAfDT6s4hMLE/wxgD5iyljTP38V1gzNKBlUE0P6V8ZkrCEROTqPPh8D0TVrnoTo81758cetULpnfu046hfLEvKXNS9xbqAdR75gNzgrTknVZ7tQT8V/APnxXU2o4A/snHOFRZeScbQCSlK7zh6pz2SA0bpS0Et1v40fnG5ZrtQylNCSN/lX0IIsfHN+VG5e49zecnBhb2iJlbuaE98mS+eq+wyXA67oq7S2yODlYSbWLELHAWkxIcIX67krC/WKdOD2K4EuE6h6GXTLzAUyLKe8aloTocdatRiDaglrPdGG+dbgNLQRNQGaW2rDhQvpY8Lm7ZNw8lqXswsZSO/bDqjQsz1nvyPuQDs6/7elPVJh//qq1LtX8ri64EL2pWQCag3/76nYKnWMlIKmZUEsKBGuBHuJVFcsAwRHrTM4QO9+5eoGKh4h/0M31owKsuMKXj3HdSla+DLGmbJiVstRLE0m9onvaXzLOg9RdQXTA8TgWKxRHKrQWW/geXedLNELOv7+UppyDHp0xaR2M5Zn9Er4yHQu28FUuzJ+aZN5KprULs5iwQx1OiRaz/GqBmnYga62isNNE8vXL0WvqGj9/H3gt8huwj/AocSoeZJzsFIRFFsUXCvAeFC1ibLE5ofYmUyT391Kp+r0zTuiyKGGqXSTzCuL4kE+pZY7yHpeeHniPMaMczJHlblRiL1wU2lY9R+e38x+Hixsng0fh1+AlJXPc="
+      ".dockerconfigjson": "AgAofTVl8pY+F2g50RCqVyrr30WrNo7CxqoO7irBPW/dfPKH/elfayzjwzUZSRTttn+lotTwuFtN7HKZZqDFWj5Obnfuzs/aiCvgYpBPXTJ/BPax2U1EOVUFvU4Z94BRUg7U+3BEozn4hZ7bw2+/TUN3Kywn8oFrbRo+TK5iSX6Jiy0Z4v96IC6X2wITjHAFxSGEoJxP4jg5MG1mlrV0HFiI8ESHkdiZSpWKnn2YsMAZd55I3BQQCampzDIRH4KyrWI4f2JmK4rOv+nNIYW0SKxj/tFZKSM4hq0WiD29xMR5j+V5mGo/vHJJMZZuLsAOuI8cAuP40742Y3gb0cWy0V0OhWBttv2vWbShCPHkUN6dZhIXooGRUw96QaxNlirCiATxyq4Uuj68mAh+xEFNe3esBBqZN2Ryhf44svoUJGFDhZGsF173z0s+x2E90BBIUiYVW3zS/Ybc22CJ3mXLtWm7zcbbE8OTQIUo1e2/kHv5GsguqwW03KMkhQyAuseZTA8q/naMqgd82HjhA46/r9qqQsDaqpTnT3al3wgUGHIxy6wNfG/jOxATELVbmgEklo8QZbGRq8X1ZJ+vaSClmNKAwl3z9W3kNBVBbajr+/9hnSpJMNflnEHo8s47nI0Tb+TR9kHRulIrtjtjctaL99r5ohqtHThNZ+0JyhG/im4jp3O2LQxjYRNMQfJNoKTzyeks95xp69PMUnsamkixGmAOn/+iqGITQECLx5TMgVDW4+g03OCdsDkQVHwkOU0yNxmJ2mKDY3cubpSe0DwU/PMJAxXpasBYIyAfTUVl8PDI+DAltCfkjoWzzNhqlBATWM51iyHEbv11jIL9u8YzMmgY360="
     }
   }
 }

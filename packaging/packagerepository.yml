@@ -11,4 +11,4 @@ spec:
     imgpkgBundle:
       image: index.docker.io/tapsme/tap-packages:1.2.0
       secretRef: 
-        name: tap-install-gitops-regcred
+        name: tap-registry
