@@ -3,8 +3,6 @@ kind: PackageInstall
 metadata:
   name: full-tbs-deps
   namespace: tap-install
-  annotations:
-    kapp.k14s.io/noop: ""
 spec:
   packageRef:
     refName: full-tbs-deps.tanzu.vmware.com
