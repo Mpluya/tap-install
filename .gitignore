@@ -1,2 +1,3 @@
 .ssh
 *.pem
+tap-values.yml

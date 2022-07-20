@@ -6,6 +6,7 @@ metadata:
     kapp.k14s.io/change-rule.create-order: "upsert after upserting tap-packageinstall-setup"
     kapp.k14s.io/change-rule.delete-order: "delete before deleting tap-packageinstall-setup"
     packaging.carvel.dev/downgradable: ""
+    ext.packaging.carvel.dev/ytt-paths-from-secret-name.0: "grype-offline"
   name: tap
   namespace: tap-install
 spec:
