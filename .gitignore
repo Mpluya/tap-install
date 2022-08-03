@@ -1,3 +1,4 @@
 .ssh
 *.pem
 tap-values.yml
+snyk-values.yml
