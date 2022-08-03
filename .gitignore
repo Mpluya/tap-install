@@ -2,3 +2,4 @@
 *.pem
 tap-values.yml
 snyk-values.yml
+snyk-api-token.yml
