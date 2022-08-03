@@ -1,0 +1,7 @@
+apiVersion: v1
+data:
+  snyk-values.yml: bmFtZXNwYWNlOiBkZWZhdWx0CnRhcmdldEltYWdlUHVsbFNlY3JldDogcmVnaXN0cnktY3JlZGVudGlhbHMKc255azoKICB0b2tlblNlY3JldDoKICAgIG5hbWU6IHNueWstdG9rZW4tc2VjcmV0Cm1ldGFkYXRhU3RvcmU6CiAgY2FTZWNyZXQ6CiAgICBpbXBvcnRGcm9tTmFtZXNwYWNlOiAiIgogIGF1dGhTZWNyZXQ6CiAgICBpbXBvcnRGcm9tTmFtZXNwYWNlOiAiIg==
+kind: Secret
+metadata:
+  name: snyk-install-values
+  namespace: tap-install
