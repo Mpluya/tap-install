@@ -1,7 +1,7 @@
 apiVersion: kappctrl.k14s.io/v1alpha1
 kind: App
 metadata:
-  name: custom-per-tenant
+  name: tenant-manager
   namespace: tap-install
 spec:
   serviceAccountName: tap-install-gitops-sa
@@ -12,8 +12,7 @@ spec:
       secretRef: 
         name: tap-install-gitops-ssh
   template:
-  - ytt:
-    ignoreUnknownComments: true
+  - ytt: {}
   deploy:
   - kapp:
       rawOptions:
