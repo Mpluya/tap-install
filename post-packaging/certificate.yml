@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: tap-gui-cert
+  namespace: tap-gui
+spec:
+  commonName: server.tap-gui.svc
+  dnsNames:
+  - server.tap-gui.svc
+  - server.tap-gui.svc.cluster.local
+  issuerRef:
+    kind: Issuer
+    name: selfsigned-issuer
+  secretName: tap-gui-cert-secret
