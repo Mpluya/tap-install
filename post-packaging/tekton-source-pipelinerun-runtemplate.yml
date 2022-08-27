@@ -18,6 +18,10 @@ spec:
       labels: $(runnable.metadata.labels)$
     spec:
       workspaces:
+        - name: maven-settings
+          subPath: maven-repo-cache
+          persistentVolumeClaim:
+            claimName: $(runnable.metadata.namespace)$-pipeline-cache
         - name: pipeline-cache 
           persistentVolumeClaim:
             claimName: $(runnable.metadata.namespace)$-pipeline-cache
