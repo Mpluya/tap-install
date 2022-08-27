@@ -21,10 +21,10 @@ spec:
         - name: maven-settings
           subPath: maven-repo-cache
           persistentVolumeClaim:
-            claimName: $(runnable.metadata.namespace)$-pipeline-cache
-        - name: pipeline-cache 
+            claimName: supplychain-pvc
+        - name: supplychain-workspace
           persistentVolumeClaim:
-            claimName: $(runnable.metadata.namespace)$-pipeline-cache
+            claimName: supplychain-pvc
       pipelineRef:
         name: $(selected.metadata.name)$
       params:
