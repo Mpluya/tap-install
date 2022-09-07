@@ -1,7 +1,7 @@
 apiVersion: kappctrl.k14s.io/v1alpha1
 kind: App
 metadata:
-  name: runqa-tap-install-gitops
+  name: run-tap-install-gitops
   namespace: tap-install
   annotations:
     kapp.k14s.io/change-rule.create-order: "upsert after upserting rbac"
