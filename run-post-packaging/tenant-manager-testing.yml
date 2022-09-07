@@ -1,0 +1,21 @@
+apiVersion: kappctrl.k14s.io/v1alpha1
+kind: App
+metadata:
+  name: run-tenant-manager-testing
+  namespace: tap-install
+spec:
+  serviceAccountName: tap-install-gitops-sa
+  fetch:
+  - git:
+      url: ssh://git@github.com/Mpluya/tap-tenant-onboarding
+      ref: origin/custom
+      subPath: run-cluster
+      secretRef: 
+        name: tap-install-gitops-ssh
+  template:
+  - ytt: {}
+  deploy:
+  - kapp:
+      rawOptions:
+      - --dangerous-override-ownership-of-existing-resources=true
+      - --diff-changes=true
