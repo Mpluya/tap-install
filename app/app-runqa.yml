@@ -12,7 +12,7 @@ spec:
   - git:
       url: ssh://git@github.com/Mpluya/tap-install
       ref: origin/main
-      subPath: run-packaging
+      subPath: runqa-packaging
       secretRef: 
         name: tap-install-gitops-ssh
   template:
