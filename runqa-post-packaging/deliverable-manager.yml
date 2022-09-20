@@ -16,5 +16,4 @@ spec:
   deploy:
   - kapp:
       rawOptions:
-      - --dangerous-allow-empty-list-of-resources=true
       - --diff-changes=true
