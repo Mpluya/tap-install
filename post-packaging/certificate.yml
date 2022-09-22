@@ -8,6 +8,7 @@ spec:
   dnsNames:
   - server.tap-gui.svc
   - server.tap-gui.svc.cluster.local
+  - appliveview.cvsdr.tapsme.org
   issuerRef:
     kind: Issuer
     name: selfsigned-issuer
