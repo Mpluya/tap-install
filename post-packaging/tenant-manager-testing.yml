@@ -4,6 +4,7 @@ metadata:
   name: tenant-manager-testing
   namespace: tap-install
 spec:
+  paused: true
   serviceAccountName: tap-install-gitops-sa
   fetch:
   - git:
