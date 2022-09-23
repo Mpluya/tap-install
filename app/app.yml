@@ -11,7 +11,7 @@ spec:
   fetch:
   - git:
       url: ssh://git@github.com/Mpluya/tap-install
-      ref: origin/main
+      ref: origin/1.3
       subPath: packaging
       secretRef: 
         name: tap-install-gitops-ssh
