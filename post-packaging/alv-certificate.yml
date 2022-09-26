@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: alv-cert
+  namespace: app-live-view
+spec:
+  commonName: appliveview.postcvs.tapsme.org
+  dnsNames:
+  - appliveview.postcvs.tapsme.org
+  issuerRef:
+    kind: Issuer
+    name: selfsigned-issuer
+  secretName: app-live-view-cert-secret
