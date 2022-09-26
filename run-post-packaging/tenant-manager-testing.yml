@@ -8,7 +8,7 @@ spec:
   fetch:
   - git:
       url: ssh://git@github.com/Mpluya/tap-tenant-onboarding
-      ref: origin/custom
+      ref: origin/1.3
       subPath: run-cluster
       secretRef: 
         name: tap-install-gitops-ssh
