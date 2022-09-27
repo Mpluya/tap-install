@@ -1,0 +1,23 @@
+apiVersion: sso.apps.tanzu.vmware.com/v1alpha1
+kind: ClientRegistration
+metadata:
+   name: my-client-registration
+   namespace: tap-install
+spec:
+   authServerSelector:
+      matchLabels:
+         name: my-first-auth-server
+         env: tutorial
+   redirectURIs:
+      - "http://test-app.run.postcvs.tapsme.org/oauth2/callback"
+   requireUserConsent: false
+   clientAuthenticationMethod: basic
+   authorizationGrantTypes:
+      - "client_credentials"
+      - "authorization_code"
+   scopes:
+      - name: "openid"
+      - name: "email"
+      - name: "profile"
+      - name: "roles"
+      - name: "message.read"
