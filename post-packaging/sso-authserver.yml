@@ -62,7 +62,7 @@ metadata:
   namespace: tap-install
 spec:
   virtualhost:
-    fqdn: authserver.tap-install.postcvs.tapsme.org
+    fqdn: authserver.postcvs.tapsme.org
   routes:
     - conditions:
         - prefix: /
