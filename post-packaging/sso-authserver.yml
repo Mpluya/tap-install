@@ -34,7 +34,7 @@ apiVersion: secretgen.k14s.io/v1alpha1
 kind: RSAKey
 metadata:
   name: authserver-signing-key
-  namespace: default
+  namespace: tap-install
 spec:
   secretTemplate:
     type: Opaque
