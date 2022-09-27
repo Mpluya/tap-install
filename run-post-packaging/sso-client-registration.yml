@@ -2,7 +2,7 @@ apiVersion: sso.apps.tanzu.vmware.com/v1alpha1
 kind: ClientRegistration
 metadata:
    name: my-client-registration
-   namespace: tap-install
+   namespace: rehan
 spec:
    authServerSelector:
       matchLabels:
