@@ -42,19 +42,6 @@ spec:
       key.pem: $(privateKey)
       pub.pem: $(publicKey)
 ---
-apiVersion: v1
-kind: Service
-metadata:
-  name: my-authserver-example
-  namespace: tap-install
-spec:
-  selector:
-    app.kubernetes.io/part-of: my-authserver-example
-    app.kubernetes.io/component: authorization-server
-  ports:
-    - port: 80
-      targetPort: 8080
----
 apiVersion: projectcontour.io/v1
 kind: HTTPProxy
 metadata:
@@ -67,5 +54,5 @@ spec:
     - conditions:
         - prefix: /
       services:
-        - name: my-authserver-example
+        - name: my-authserver-example-auth-server
           port: 80
