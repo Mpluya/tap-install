@@ -38,8 +38,6 @@ spec:
         # MUST contain "openid". Other common OpenID values are "profile", "email".
         scopes:
           - "openid"
-          - "profile"
-          - "email"
 ---
 apiVersion: v1
 kind: Secret
