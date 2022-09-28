@@ -22,18 +22,18 @@ spec:
         # The issuer identifier. If the provider supports OpenID Connect Discovery,
         # this value will be used to auto-configure the provider, by obtaining information
         # at https://issuer-uri/.well-known/openid-configuration
-        issuerURI: https://gitlab.com/.well-known/openid-configuration
+        issuerURI: https://gitlab.com
         # Obtained when registering a client with the provider, often through a web UI
         clientID: 9075b209a46a738ffd01d19b115aa50c441a098ad3f76b661807b76985d5715e
         # Obtained when registering a client with the provider, often through a web UI
         clientSecretRef:
           name: gitlab-openid-client-secret
         # The URI for performing an authorization request and obtaining an authorization_code
-        authorizationUri: https://gitlab.com/oauth2/authorize
+        authorizationUri: https://gitlab.com/oauth/authorize
         # The URI for performing a token request, and obtaining a token
-        tokenUri: https://gitlab.com/oauth2/token
+        tokenUri: https://gitlab.com/oauth/token
         # The JWKS endpoint for obtaining the JSON Web Keys, used to verify token signatures
-        jwksUri: https://gitlab.com/oauth2/jwks
+        jwksUri: https://gitlab.com/oauth/discovery/keys
         # Scopes used in the authorization request
         # MUST contain "openid". Other common OpenID values are "profile", "email".
         scopes:
