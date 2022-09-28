@@ -10,6 +10,7 @@ metadata:
   annotations:
     sso.apps.tanzu.vmware.com/allow-client-namespaces: "rehan"
 spec:
+  issuerURI: https://gitlab.com/.well-known/openid-configuration
   identityProviders:
     - name: gitlab-oidc-provider
       openID:
