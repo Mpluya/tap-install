@@ -44,3 +44,31 @@ metadata:
   namespace: tap-install
 stringData:
   clientSecret: 6e7581783de3a67e02a1773cca92b1cd1c40c13ac45092f76ea5b190aebbe6a4
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: gitlab-oidc-authserver-example
+  namespace: tap-install
+spec:
+  selector:
+    app.kubernetes.io/part-of: gitlab-oidc-example
+    app.kubernetes.io/component: gitlab-oidc-example
+  ports:
+    - port: 80
+      targetPort: 8080
+---
+apiVersion: projectcontour.io/v1
+kind: HTTPProxy
+metadata:
+  name: gitlab-oidc-authserver-example
+  namespace: tap-install
+spec:
+  virtualhost:
+    fqdn: gitlab-authserver.run.postcvs.tapsme.org
+  routes:
+    - conditions:
+        - prefix: /
+      services:
+        - name: gitlab-oidc-authserver-example
+          port: 80
