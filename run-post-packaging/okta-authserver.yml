@@ -26,10 +26,10 @@ spec:
         # at https://issuer-uri/.well-known/openid-configuration
         issuerURI: https://trial-1512597.okta.com
         # Obtained when registering a client with the provider, often through a web UI
-        clientID: 9075b209a46a738ffd01d19b115aa50c441a098ad3f76b661807b76985d5715e
+        clientID: 0oa2kcou6759W6o8G697
         # Obtained when registering a client with the provider, often through a web UI
         clientSecretRef:
-          name: gitlab-openid-client-secret
+          name: okta-client-secret
         # The URI for performing an authorization request and obtaining an authorization_code
         authorizationUri: https://trial-1512597.okta.com/oauth2/v1/authorize
         # The URI for performing a token request, and obtaining a token
@@ -62,7 +62,7 @@ metadata:
   name: okta-client-secret
   namespace: tap-install
 stringData:
-  clientSecret: 6e7581783de3a67e02a1773cca92b1cd1c40c13ac45092f76ea5b190aebbe6a4
+  clientSecret: ee7SGeUyuDARsYGVUeMo_83bWL3ljtD-yGmxYa8t
 ---
 apiVersion: v1
 kind: Service
