@@ -1,0 +1,77 @@
+
+apiVersion: sso.apps.tanzu.vmware.com/v1alpha1
+kind: AuthServer
+metadata:
+  name: okta
+  namespace: tap-install
+  labels:
+    name: okta
+    env: tutorial
+  annotations:
+    sso.apps.tanzu.vmware.com/allow-unsafe-issuer-uri: ""
+    sso.apps.tanzu.vmware.com/allow-client-namespaces: "rehan"
+spec:
+  server: |
+    tomcat:
+      remoteip:
+        internal-proxies: "10\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}"
+  issuerURI: https://trial-1512597.okta.com"
+  identityProviders:
+    - name: okta
+      openID:
+        # REQUIRED
+        # The issuer identifier. If the provider supports OpenID Connect Discovery,
+        # this value will be used to auto-configure the provider, by obtaining information
+        # at https://issuer-uri/.well-known/openid-configuration
+        issuerURI: https://trial-1512597.okta.com"
+        # Obtained when registering a client with the provider, often through a web UI
+        clientID: 9075b209a46a738ffd01d19b115aa50c441a098ad3f76b661807b76985d5715e
+        # Obtained when registering a client with the provider, often through a web UI
+        clientSecretRef:
+          name: gitlab-openid-client-secret
+        # The URI for performing an authorization request and obtaining an authorization_code
+        authorizationUri: https://trial-1512597.okta.com/oauth2/v1/authorize
+        # The URI for performing a token request, and obtaining a token
+        tokenUri: https://trial-1512597.okta.com/oauth2/v1/token
+        # The JWKS endpoint for obtaining the JSON Web Keys, used to verify token signatures
+        jwksUri: https://trial-1512597.okta.com/oauth2/v1/keys
+        # Scopes used in the authorization request
+        # MUST contain "openid". Other common OpenID values are "profile", "email".
+        scopes:
+          - "openid"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: okta-client-secret
+  namespace: tap-install
+stringData:
+  clientSecret: 6e7581783de3a67e02a1773cca92b1cd1c40c13ac45092f76ea5b190aebbe6a4
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: okta
+  namespace: tap-install
+spec:
+  selector:
+    app.kubernetes.io/part-of: okta
+    app.kubernetes.io/component: okta
+  ports:
+    - port: 80
+      targetPort: 8080
+---
+apiVersion: projectcontour.io/v1
+kind: HTTPProxy
+metadata:
+  name: okta
+  namespace: tap-install
+spec:
+  virtualhost:
+    fqdn: okta-authserver.run.postcvs.tapsme.org
+  routes:
+    - conditions:
+        - prefix: /
+      services:
+        - name: okta
+          port: 80
