@@ -68,6 +68,8 @@ kind: Service
 metadata:
   name: okta
   namespace: tap-install
+  annotations:
+    kapp.k14s.io/disable-default-label-scoping-rules: ""
 spec:
   selector:
     app.kubernetes.io/part-of: okta
