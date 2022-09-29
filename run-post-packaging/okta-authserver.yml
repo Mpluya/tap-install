@@ -39,6 +39,21 @@ spec:
         # MUST contain "openid". Other common OpenID values are "profile", "email".
         scopes:
           - "openid"
+  tokenSignature:
+    signAndVerifyKeyRef:
+      name: "okta-authserver-signing-key"
+---
+apiVersion: secretgen.k14s.io/v1alpha1
+kind: RSAKey
+metadata:
+  name: okta-authserver-signing-key
+  namespace: tap-install
+spec:
+  secretTemplate:
+    type: Opaque
+    stringData:
+      key.pem: $(privateKey)
+      pub.pem: $(publicKey)
 ---
 apiVersion: v1
 kind: Secret
