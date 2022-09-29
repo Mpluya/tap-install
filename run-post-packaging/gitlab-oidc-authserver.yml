@@ -16,6 +16,8 @@ spec:
       remoteip:
         internal-proxies: "10\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}"
   issuerURI: https://gitlab.com
+  logging: debug
+  replicas: 1
   identityProviders:
     - name: gitlab-oidc-provider
       openID:
