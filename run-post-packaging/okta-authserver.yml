@@ -31,7 +31,7 @@ spec:
         clientSecretRef:
           name: okta-client-secret
         # The URI for performing an authorization request and obtaining an authorization_code
-        authorizationUri: https://trial-1512597.okta.com/oauth2/v1/authorize
+        authorizationUri: https://trial-1512597.okta.com/oauth2/default/v1/authorize
         # The URI for performing a token request, and obtaining a token
         tokenUri: https://trial-1512597.okta.com/oauth2/v1/token
         # The JWKS endpoint for obtaining the JSON Web Keys, used to verify token signatures
