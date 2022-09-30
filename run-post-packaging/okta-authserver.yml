@@ -15,7 +15,7 @@ spec:
     tomcat:
       remoteip:
         internal-proxies: "10\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}"
-  issuerURI: https://trial-1512597.okta.com
+  issuerURI: https://trial-1512597.okta.com/oauth2/default
   replicas: 1
   identityProviders:
     - name: okta
@@ -24,18 +24,18 @@ spec:
         # The issuer identifier. If the provider supports OpenID Connect Discovery,
         # this value will be used to auto-configure the provider, by obtaining information
         # at https://issuer-uri/.well-known/openid-configuration
-        issuerURI: https://trial-1512597.okta.com
+        issuerURI: https://trial-1512597.okta.com/oauth2/default
         # Obtained when registering a client with the provider, often through a web UI
         clientID: 0oa2kcou6759W6o8G697
         # Obtained when registering a client with the provider, often through a web UI
         clientSecretRef:
           name: okta-client-secret
         # The URI for performing an authorization request and obtaining an authorization_code
-        authorizationUri: https://trial-1512597.okta.com/oauth2/v1/authorize
+        authorizationUri: https://trial-1512597.okta.com/oauth2/default/v1/authorize
         # The URI for performing a token request, and obtaining a token
-        tokenUri: https://trial-1512597.okta.com/oauth2/v1/token
+        tokenUri: https://trial-1512597.okta.com/oauth2/default/v1/token
         # The JWKS endpoint for obtaining the JSON Web Keys, used to verify token signatures
-        jwksUri: https://trial-1512597.okta.com/oauth2/v1/keys
+        jwksUri: https://trial-1512597.okta.com/oauth2/default/v1/keys
         # Scopes used in the authorization request
         # MUST contain "openid". Other common OpenID values are "profile", "email".
         scopes:
