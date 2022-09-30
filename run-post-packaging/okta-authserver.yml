@@ -24,7 +24,7 @@ spec:
         # The issuer identifier. If the provider supports OpenID Connect Discovery,
         # this value will be used to auto-configure the provider, by obtaining information
         # at https://issuer-uri/.well-known/openid-configuration
-        issuerURI: https://trial-1512597.okta.com
+        issuerURI: https://trial-1512597.okta.com/oauth2/default
         # Obtained when registering a client with the provider, often through a web UI
         clientID: 0oa2kcou6759W6o8G697
         # Obtained when registering a client with the provider, often through a web UI
