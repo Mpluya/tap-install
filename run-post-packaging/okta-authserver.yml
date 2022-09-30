@@ -15,7 +15,7 @@ spec:
     tomcat:
       remoteip:
         internal-proxies: "10\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}"
-  issuerURI: https://trial-1512597.okta.com
+  issuerURI: https://trial-1512597.okta.com/oauth2/default
   replicas: 1
   identityProviders:
     - name: okta
