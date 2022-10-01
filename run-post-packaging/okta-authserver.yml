@@ -63,7 +63,7 @@ metadata:
   name: okta-client-secret
   namespace: tap-install
 stringData:
-  clientSecret: APWEjojjYoI9TkyGBgApGhuTfJTCfhEdL5EXvkj0
+  clientSecret: "APWEjojjYoI9TkyGBgApGhuTfJTCfhEdL5EXvkj0"
 ---
 apiVersion: v1
 kind: Service
