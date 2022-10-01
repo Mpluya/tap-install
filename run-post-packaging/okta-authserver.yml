@@ -11,6 +11,7 @@ metadata:
     sso.apps.tanzu.vmware.com/allow-unsafe-issuer-uri: ""
     sso.apps.tanzu.vmware.com/allow-client-namespaces: "rehan"
 spec:
+  logging: debug
   server: |
     tomcat:
       remoteip:
