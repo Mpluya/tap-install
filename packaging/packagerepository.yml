@@ -9,7 +9,7 @@ metadata:
 spec:
   fetch:
     imgpkgBundle:
-      image: registry.tanzu.vmware.com/tanzu-application-platform/tap-packages:1.3.0-rc.2
+      image: registry.tanzu.vmware.com/tanzu-application-platform/tap-packages:1.3.0
       secretRef: 
         name: tap-registry
         namespace: tap-install
