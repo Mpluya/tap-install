@@ -17,4 +17,4 @@ spec:
   serviceAccountName: tap-tap-install-sa
   values:
   - secretRef:
-      name: tap-tap-install-values
+      name: tmp-tap-values
