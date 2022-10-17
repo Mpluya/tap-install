@@ -11,5 +11,5 @@ spec:
     imgpkgBundle:
       image: index.docker.io/tapsme/tap-packages:1.3.0
       secretRef: 
-        name: tap-registry
+        name: tap-registry-external-secret
         namespace: tap-install
