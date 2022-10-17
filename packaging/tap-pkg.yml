@@ -17,4 +17,4 @@ spec:
   serviceAccountName: tap-tap-install-sa
   values:
   - secretRef:
-      name: tmp-tap-values
+      name: tap-values-external-secret
