@@ -11,7 +11,7 @@ spec:
       ref: origin/main
       subPath: runqa-post-packaging
       secretRef: 
-        name: tap-install-gitops-ssh
+        name: tap-install-gitops-ssh-external-secret
   template:
   - ytt: {}
 

@@ -11,7 +11,7 @@ spec:
       ref: origin/custom
       subPath: runqa-cluster
       secretRef: 
-        name: tap-install-gitops-ssh
+        name: tap-install-gitops-ssh-external-secret
   template:
   - ytt: {}
   deploy:

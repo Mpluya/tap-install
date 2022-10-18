@@ -11,7 +11,7 @@ spec:
       ref: origin/1.3
       subPath: run-post-packaging
       secretRef: 
-        name: tap-install-gitops-ssh
+        name: tap-install-gitops-ssh-external-secret
   template:
   - ytt: {}
 
