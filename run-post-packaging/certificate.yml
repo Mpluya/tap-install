@@ -4,9 +4,9 @@ metadata:
   name: workload-cert-secret
   namespace: tap-install
 spec:
-  commonName: *.run.postcvs.tapsme.org
+  commonName: run.postcvs.tapsme.org
   dnsNames:
-  - *.run.postcvs.tapsme.org
+  - run.postcvs.tapsme.org
   issuerRef:
     kind: Issuer
     name: workload-selfsigned-issuer
