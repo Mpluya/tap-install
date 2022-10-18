@@ -6,8 +6,6 @@ metadata:
 spec:
   commonName: tap-gui.postcvs.tapsme.org
   dnsNames:
-  - server.tap-gui.svc
-  - server.tap-gui.svc.cluster.local
   - tap-gui.postcvs.tapsme.org
   issuerRef:
     kind: Issuer
