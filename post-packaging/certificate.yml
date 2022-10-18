@@ -4,7 +4,7 @@ metadata:
   name: tap-gui-cert
   namespace: tap-gui
 spec:
-  commonName: server.tap-gui.svc
+  commonName: tap-gui.postcvs.tapsme.org
   dnsNames:
   - server.tap-gui.svc
   - server.tap-gui.svc.cluster.local
