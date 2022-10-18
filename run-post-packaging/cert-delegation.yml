@@ -1,0 +1,10 @@
+apiVersion: projectcontour.io/v1
+kind: TLSCertificateDelegation
+metadata:
+  name: workload-cert-ssl-delegation
+  namespace: tap-install
+spec:
+  delegations:
+    - secretName: workload-cert-secret
+      targetNamespaces:
+      - "*"
