@@ -3,6 +3,11 @@
 - kapp deploy -a tap-manager -f ./app -n tap-install 
 - kapp deploy -a tap-manager-post-install -f ./post-app -n tap-install 
 
+# tap-install in run cluster
+- kapp deploy -a tap-install-gitops -f ./run-app -n tap-install 
+- kapp deploy -a run-post-tap-install-gitops -f ./post-app/run-post-app.yml -n tap-install 
+
+
 ## tap-values.yml
 
 Steps to enable external secrets operator using AzureKeyVault as secret store:
