@@ -6,6 +6,7 @@ metadata:
 spec:
   commonName: "*.run.postcvs.tapsme.org"
   dnsNames:
+  - "customer-profile.mae.run.postcvs.tapsme.org"
   - "*.run.postcvs.tapsme.org"
   issuerRef:
     kind: Issuer
