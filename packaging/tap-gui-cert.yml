@@ -4,12 +4,23 @@ metadata:
   name: tap-gui-cert
   namespace: tap-install
 spec:
+  subject:
+    countries:
+    - US
+    provinces:
+    - California
+    localities:
+    - San Fransisco
+    organizations:
+    - vmware
+    organizationalUnits:
+    - vmware mambg
   secretName: tap-gui-cert
   isCA: false
   dnsNames:
+  - tap-gui.postcvs.tapsme.org
   - server.tap-gui.svc
   - server.tap-gui.svc.cluster.local
-  - tap-gui.postcvs.tapsme.org
   issuerRef:
     name: post-cvs-full-ca-issuer
 ---
