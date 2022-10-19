@@ -1,14 +1,12 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: tap-gui-cert
+  name: accelerator-cert
   namespace: tap-install
 spec:
-  secretName: tap-gui-cert
+  secretName: accelerator-cert
   isCA: false
   dnsNames:
-  - server.tap-gui.svc
-  - server.tap-gui.svc.cluster.local
-  - tap-gui.postcvs.tapsme.org
+  - accelerator.postcvs.tapsme.org
   issuerRef:
     name: post-cvs-full-ca-issuer
