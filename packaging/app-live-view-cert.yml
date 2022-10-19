@@ -20,4 +20,4 @@ spec:
   delegations:
     - secretName: app-live-view-cert
       targetNamespaces:
-      - app-live-view 
+      - "*"

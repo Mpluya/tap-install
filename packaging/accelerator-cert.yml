@@ -20,4 +20,4 @@ spec:
   delegations:
     - secretName: accelerator-cert
       targetNamespaces:
-      - accelerator-system
+      - "*"

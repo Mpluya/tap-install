@@ -22,4 +22,4 @@ spec:
   delegations:
     - secretName: tap-gui-cert
       targetNamespaces:
-      - tap-gui
+      - "*"
