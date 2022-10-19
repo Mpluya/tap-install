@@ -4,7 +4,14 @@ metadata:
   name: post-cvs-ca-cert
   namespace: tap-install
 spec:
+  subject:
+    organizations:
+    - vmware
+    organizationalUnits:
+    - vmware mambg
   secretName: post-cvs-ca-cert
+  dnsNames: 
+    - "*.postcvs.tapsme.org"
   isCA: true
   issuerRef:
     name: post-cvs-selfsigned-cluster-issuer
