@@ -1,0 +1,34 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: workload-cert
+  namespace: tap-install
+spec:
+  subject:
+    countries:
+    - US
+    provinces:
+    - California
+    localities:
+    - San Fransisco
+    organizations:
+    - vmware
+    organizationalUnits:
+    - vmware mambg
+  secretName: workload-cert
+  isCA: false
+  dnsNames:
+  - "*.run.postcvs.tapsme.org"
+  issuerRef:
+    name: post-cvs-full-ca-issuer
+---
+apiVersion: projectcontour.io/v1
+kind: TLSCertificateDelegation
+metadata:
+  name: workload-cert-delegation
+  namespace: tap-install
+spec:
+  delegations:
+    - secretName: workload-cert
+      targetNamespaces:
+      - "*"
