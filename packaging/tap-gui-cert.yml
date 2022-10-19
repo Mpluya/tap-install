@@ -12,3 +12,14 @@ spec:
   - tap-gui.postcvs.tapsme.org
   issuerRef:
     name: post-cvs-full-ca-issuer
+---
+apiVersion: projectcontour.io/v1
+kind: TLSCertificateDelegation
+metadata:
+  name: tap-gui-cert-delegation
+  namespace: tap-install
+spec:
+  delegations:
+    - secretName: tap-gui-cert
+      targetNamespaces:
+      - tap-gui

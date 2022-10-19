@@ -10,3 +10,14 @@ spec:
   - accelerator.postcvs.tapsme.org
   issuerRef:
     name: post-cvs-full-ca-issuer
+---
+apiVersion: projectcontour.io/v1
+kind: TLSCertificateDelegation
+metadata:
+  name: accelerator-cert-delegation
+  namespace: tap-install
+spec:
+  delegations:
+    - secretName: accelerator-cert
+      targetNamespaces:
+      - accelerator-system

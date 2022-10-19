@@ -10,3 +10,14 @@ spec:
   - appliveview.postcvs.tapsme.org
   issuerRef:
     name: post-cvs-full-ca-issuer
+---
+apiVersion: projectcontour.io/v1
+kind: TLSCertificateDelegation
+metadata:
+  name: appliveview-cert-delegation
+  namespace: tap-install
+spec:
+  delegations:
+    - secretName: app-live-view-cert
+      targetNamespaces:
+      - app-live-view 
