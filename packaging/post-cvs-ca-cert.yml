@@ -12,5 +12,4 @@ spec:
     - client auth
   isCA: true
   issuerRef:
-    kind: ClusterIssuer
     name: post-cvs-selfsigned-cluster-issuer

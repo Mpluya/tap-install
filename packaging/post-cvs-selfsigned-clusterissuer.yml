@@ -1,6 +1,7 @@
 apiVersion: cert-manager.io/v1
-kind: ClusterIssuer
+kind: Issuer
 metadata:
   name: post-cvs-selfsigned-cluster-issuer
+  namespace: tap-install
 spec:
   selfSigned: {}
