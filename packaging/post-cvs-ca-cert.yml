@@ -5,8 +5,6 @@ metadata:
   namespace: tap-install
 spec:
   secretName: post-cvs-ca-cert
-  dnsNames: 
-    - postcvs.tapsme.org
   isCA: true
   issuerRef:
     name: post-cvs-selfsigned-cluster-issuer

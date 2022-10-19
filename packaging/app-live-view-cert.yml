@@ -4,6 +4,17 @@ metadata:
   name: app-live-view-cert
   namespace: tap-install
 spec:
+  subject:
+    countries:
+    - US
+    provinces:
+    - California
+    localities:
+    - San Fransisco
+    organizations:
+    - vmware
+    organizationalUnits:
+    - vmware mambg
   secretName: app-live-view-cert
   isCA: false
   dnsNames:
