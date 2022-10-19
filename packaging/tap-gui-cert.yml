@@ -1,0 +1,17 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: tap-gui-cert
+  namespace: tap-install
+spec:
+  secretName: tap-gui-cert
+  isCA: false
+  usages:
+    - server auth
+    - client auth
+  dnsNames:
+  - server.tap-gui.svc
+  - server.tap-gui.svc.cluster.local
+  - tap-gui.postcvs.tapsme.org
+  issuerRef:
+    name: post-cvs-full-ca-issuer
