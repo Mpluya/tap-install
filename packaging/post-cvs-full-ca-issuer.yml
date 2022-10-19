@@ -1,5 +1,5 @@
 apiVersion: cert-manager.io/v1
-kind: CLusterIssuer
+kind: ClusterIssuer
 metadata:
   name: post-cvs-full-ca-issuer
 spec:
