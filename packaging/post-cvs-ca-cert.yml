@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: post-cvs-ca-cert
+spec:
+  secretName: post-cvs-ca-cert
+  dnsNames: 
+    - postcvs.tapsme.org
+  usages:
+    - server auth
+    - client auth
+  isCA: true
+  issuerRef:
+    name: post-cvs-selfsigned-cluster-issuer
