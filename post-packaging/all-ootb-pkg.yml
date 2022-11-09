@@ -7,8 +7,7 @@ spec:
   packageRef:
     refName: all-ootb-supply-chains.tanzu.vmware.com
     versionSelection:
-      constraints: ">1.0.0"
-      prereleases: {}
+      constraints: "1.0.0"
   serviceAccountName: tap-tap-install-sa
   values:
   - secretRef:
