@@ -8,5 +8,5 @@ spec:
     imgpkgBundle:
       image: index.docker.io/tapsme/more-ootb-supply-chains-repo.tanzu.vmware.com:1.0.0
       secretRef: 
-        name: tap-registry
+        name: registry-credentials
         namespace: tap-install

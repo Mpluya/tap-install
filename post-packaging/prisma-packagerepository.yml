@@ -8,5 +8,5 @@ spec:
     imgpkgBundle:
       image: index.docker.io/tapsme/prisma-repo.scanning.apps.tanzu.vmware.com:0.1.0
       secretRef: 
-        name: tap-registry
+        name: registry-credentials
         namespace: tap-install
