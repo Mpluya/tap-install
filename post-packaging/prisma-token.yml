@@ -1,0 +1,7 @@
+apiVersion: v1
+data:
+  prisma_token: e30K
+kind: Secret
+metadata:
+  name: prisma-token
+  namespace: tap-install

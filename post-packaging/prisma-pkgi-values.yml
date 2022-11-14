@@ -1,0 +1,7 @@
+apiVersion: v1
+data:
+  values.yml: LS0tCm5hbWVzcGFjZTogZGVmYXVsdAp0YXJnZXRJbWFnZVB1bGxTZWNyZXQ6IHJlZ2lzdHJ5LWNyZWRlbnRpYWxzCnByaXNtYToKICB0b2tlblNlY3JldDoKICAgIG5hbWU6IHByaXNtYS10b2tlbg==
+kind: Secret
+metadata:
+  name: prisma-values-secret
+  namespace: tap-install

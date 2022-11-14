@@ -1,0 +1,6 @@
+---
+namespace: default
+targetImagePullSecret: registry-credentials
+prisma:
+  tokenSecret:
+    name: prisma-token
