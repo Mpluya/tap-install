@@ -6,7 +6,7 @@ metadata:
 spec:
   fetch:
     imgpkgBundle:
-      image: index.docker.io/tapsme/more-ootb-supply-chains-repo.tanzu.vmware.com:1.0.0
+      image: index.docker.io/tapsme/all-ootb-supply-chains-repo.tanzu.vmware.com:1.0.0
       secretRef: 
         name: registry-credentials
         namespace: tap-install
