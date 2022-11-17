@@ -6,7 +6,7 @@ metadata:
 spec:
   fetch:
     imgpkgBundle:
-      image: index.docker.io/tapsme/prisma-repo-scanning-bundle:0.1.0-beta.1
+      image: index.docker.io/tapsme/prisma-repo-scanning-bundle:0.1.0-beta.2
       secretRef: 
         name: tap-registry
         namespace: tap-install
