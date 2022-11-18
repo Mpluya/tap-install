@@ -5,7 +5,7 @@ metadata:
   namespace: tap-install
 spec:
   packageRef:
-    refName: ore-ootb-supply-chains.tanzu.vmware.com
+    refName: more-ootb-supply-chains.tanzu.vmware.com
     versionSelection:
       constraints: ">1.0.0"
       prereleases: {}
