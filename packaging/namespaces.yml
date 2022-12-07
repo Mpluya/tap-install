@@ -18,7 +18,7 @@ spec:
           metadata:
             name: #@ ns
             labels:
-              apps.tanzu.vmware.com/tap-ns=""
+              apps.tanzu.vmware.com/tap-ns: ""
           #@ end
   template:
   - ytt:
