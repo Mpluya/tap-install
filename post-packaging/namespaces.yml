@@ -1,5 +1,4 @@
 #@ load("@ytt:data", "data")
-#@ load("@ytt:yaml", "yaml")
 apiVersion: kappctrl.k14s.io/v1alpha1
 kind: App
 metadata:
@@ -9,9 +8,16 @@ spec:
   serviceAccountName: tap-install-gitops-sa
   fetch:
   - inline:
-      pathsFrom:
-      - secretRef:
-          name: app-onboarding-files
+      paths:
+        additional-users.yaml: |
+          #@ load("@ytt:data", "data")
+          #@ for ns in data.values.namespaces:
+          ---
+          apiVersion: v1
+          kind: Namespace
+          metadata:
+            name: #@ ns
+          #@ end
   template:
   - ytt:
       inline:
@@ -28,18 +34,3 @@ spec:
   - kapp: 
       rawOptions: 
       - --diff-changes=true
----
-apiVersion: v1
-kind: Secret
-metadata:
-  name: app-onboarding-files
-stringData:
-  additional-users.yaml: |
-    #@ load("@ytt:data", "data")
-    #@ for ns in data.values.namespaces:
-    ---
-    apiVersion: v1
-    kind: Namespace
-    metadata:
-      name: #@ ns
-    #@ end
