@@ -14,10 +14,16 @@ spec:
           name: app-onboarding-files
   template:
   - ytt:
-      ignoreUnknownComments: true
-      valuesFrom:
-      - secretRef:
-          name: namespace-names
+      inline:
+        paths:
+          values.yaml: |
+            #@data/values
+            ---
+            namespaces:
+            - mae
+            - justin
+            - aiden
+            - travis
   deploy:
   - kapp: 
       rawOptions: 
@@ -26,22 +32,10 @@ spec:
 apiVersion: v1
 kind: Secret
 metadata:
-  name: namespace-names
-stringData:
-  values.yaml: #@ yaml.encode({ "namespaces": data.values.namespaces })
----
-apiVersion: v1
-kind: Secret
-metadata:
   name: app-onboarding-files
 stringData:
   additional-users.yaml: |
-    #@ load("@ytt:overlay", "overlay")
     #@ load("@ytt:data", "data")
-    #@ load("@ytt:base64", "base64")
-    #@ load("@ytt:json", "json")
-    #@ load("@ytt:yaml", "yaml")
-
     #@ for ns in data.values.namespaces:
     ---
     apiVersion: v1
