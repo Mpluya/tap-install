@@ -48,4 +48,9 @@ metadata:
     kapp.k14s.io/create-strategy: fallback-on-update
     namespace-provisioner.apps.tanzu.vmware.com/no-overwrite: "" #! This annotation tells the provisioner app to not override this configMap as this is your desired state.
 data:
-  namespaces.yaml: #@ yaml.encode({ "namespaces": data.values.namespaces })
+  namespaces.yaml: |
+    #@data/values 
+    ---
+    namespaces:
+    - name: justin
+    - name: mae
