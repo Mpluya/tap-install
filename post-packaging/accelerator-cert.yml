@@ -7,7 +7,7 @@ spec:
   secretName: accelerator-cert
   isCA: false
   dnsNames:
-  - accelerator.postcvs.tapsme.org
+  - accelerator.learn.tapsme.org
   issuerRef:
     name: post-cvs-full-ca-issuer
 ---

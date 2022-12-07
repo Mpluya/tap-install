@@ -4,9 +4,9 @@ metadata:
   name: tap-gui-cert
   namespace: tap-gui
 spec:
-  commonName: tap-gui.postcvs.tapsme.org
+  commonName: tap-gui.learn.tapsme.org
   dnsNames:
-  - tap-gui.postcvs.tapsme.org
+  - tap-gui.learn.tapsme.org
   issuerRef:
     kind: Issuer
     name: selfsigned-issuer

@@ -18,7 +18,7 @@ spec:
   secretName: tap-gui-cert
   isCA: false
   dnsNames:
-  - tap-gui.postcvs.tapsme.org
+  - tap-gui.learn.tapsme.org
   - server.tap-gui.svc
   - server.tap-gui.svc.cluster.local
   issuerRef:

@@ -4,9 +4,9 @@ metadata:
   name: alv-cert
   namespace: app-live-view
 spec:
-  commonName: appliveview.postcvs.tapsme.org
+  commonName: appliveview.learn.tapsme.org
   dnsNames:
-  - appliveview.postcvs.tapsme.org
+  - appliveview.learn.tapsme.org
   issuerRef:
     kind: Issuer
     name: selfsigned-issuer

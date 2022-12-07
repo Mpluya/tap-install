@@ -11,7 +11,7 @@ spec:
     - vmware mambg
   secretName: post-cvs-ca-cert
   dnsNames: 
-    - "*.postcvs.tapsme.org"
+    - "*.learn.tapsme.org"
   isCA: true
   issuerRef:
     name: post-cvs-selfsigned-cluster-issuer
