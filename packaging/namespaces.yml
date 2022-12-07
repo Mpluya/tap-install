@@ -28,9 +28,6 @@ spec:
             namespaces:
             - justin
             - mae
-            - aiden
-            - travis
-            - large
   deploy:
   - kapp: 
       rawOptions: 
