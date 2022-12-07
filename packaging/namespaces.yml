@@ -16,7 +16,7 @@ spec:
           apiVersion: v1
           kind: Namespace
           metadata:
-            name: #@ ns
+            name: #@ ns.name
             labels:
               apps.tanzu.vmware.com/tap-ns: ""
           #@ end
