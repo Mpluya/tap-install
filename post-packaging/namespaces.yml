@@ -9,7 +9,7 @@ spec:
   fetch:
   - inline:
       paths:
-        additional-users.yaml: |
+        config.yaml: |
           #@ load("@ytt:data", "data")
           #@ for ns in data.values.namespaces:
           ---
