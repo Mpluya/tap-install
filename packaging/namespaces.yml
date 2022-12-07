@@ -1,4 +1,5 @@
 #@ load("@ytt:data", "data")
+#@ load("@ytt:yaml", "yaml")
 apiVersion: kappctrl.k14s.io/v1alpha1
 kind: App
 metadata:
