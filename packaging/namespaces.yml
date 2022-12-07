@@ -22,15 +22,18 @@ spec:
           #@ end
   template:
   - ytt:
-      inline:
-        paths:
-          values.yaml: |
-            #@data/values
-            ---
-            namespaces:
-            - justin
-            - mae
+      ignoreUnknownComments: true
+      valuesFrom:
+      - secretRef:
+          name: namespace-names
   deploy:
   - kapp: 
       rawOptions: 
       - --diff-changes=true
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: namespace-names
+stringData:
+  values.yaml: #@ yaml.encode({ "namespaces": data.values.namespaces })
