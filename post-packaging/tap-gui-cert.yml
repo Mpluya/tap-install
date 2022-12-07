@@ -22,7 +22,7 @@ spec:
   - server.tap-gui.svc
   - server.tap-gui.svc.cluster.local
   issuerRef:
-    name: post-cvs-full-ca-issuer
+    name: tap-learn-full-ca-issuer
 ---
 apiVersion: projectcontour.io/v1
 kind: TLSCertificateDelegation

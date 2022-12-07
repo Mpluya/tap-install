@@ -1,8 +1,8 @@
 apiVersion: cert-manager.io/v1
 kind: Issuer
 metadata:
-  name: post-cvs-full-ca-issuer
+  name: tap-learn-full-ca-issuer
   namespace: tap-install
 spec:
   ca:
-    secretName: post-cvs-ca-cert
+    secretName: tap-learn-ca-cert

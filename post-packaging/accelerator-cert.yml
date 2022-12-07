@@ -9,7 +9,7 @@ spec:
   dnsNames:
   - accelerator.learn.tapsme.org
   issuerRef:
-    name: post-cvs-full-ca-issuer
+    name: tap-learn-full-ca-issuer
 ---
 apiVersion: projectcontour.io/v1
 kind: TLSCertificateDelegation
