@@ -20,10 +20,10 @@ spec:
             #@data/values
             ---
             namespaces:
-            - mae
-            - justin
-            - aiden
-            - travis
+            - caleb
+            - jeff
+            - jeremy
+            - robert
   deploy:
   - kapp: 
       rawOptions: 
