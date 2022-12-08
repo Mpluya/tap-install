@@ -41,7 +41,7 @@ data:
   namespaces.yaml: |
     #@data/values 
     ---
-    namespaces: #@ some_yaml()
+    namespaces: #@ "#@ {}".format(some_yaml())
 ---
 apiVersion: v1
 kind: ConfigMap
