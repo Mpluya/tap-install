@@ -39,7 +39,6 @@ metadata:
   namespace: tap-install
 data:
   namespaces.yaml: |
-    #@data/values 
     ---
     namespaces:
     - name: justin
