@@ -23,10 +23,10 @@ spec:
           #@ end
   template:
   - ytt:
-      inline:
-        pathsFrom:
-          - configMapRef:
-              name: desired-namespaces
+      ignoreUnknownComments: true
+      valuesFrom:
+      - configMapRef:
+          name: tenants
   deploy:
   - kapp: 
       rawOptions: 
@@ -35,10 +35,10 @@ spec:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: desired-namespaces
+  name: tenants
   namespace: tap-install
 data:
-  namespaces.yaml: "#@ #@data/values\n---\nnamespaces:\n#@ some_yaml()"
+  namespaces.yaml: #@ yaml.encode({ "namespaces": data.values.namespaces })
 ---
 apiVersion: v1
 kind: ConfigMap

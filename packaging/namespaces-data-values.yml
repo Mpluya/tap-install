@@ -2,4 +2,6 @@
 ---
 namespaces:
 - name: justin
+  language: java
 - name: mae
+  language: java
