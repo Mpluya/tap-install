@@ -18,8 +18,6 @@ spec:
           kind: Namespace
           metadata:
             name: #@ ns.name
-            labels:
-              apps.tanzu.vmware.com/tap-ns: ""
           #@ end
   template:
   - ytt:
