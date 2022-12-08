@@ -1,0 +1,4 @@
+#@ def some_yaml():
+- name: justin
+- name: mae
+#@ end

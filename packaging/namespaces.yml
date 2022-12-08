@@ -36,14 +36,12 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: desired-namespaces
+  namespace: tap-install
 data:
   namespaces.yaml: |
     #@data/values 
     ---
-    namespaces:
-    - name: justin
-    - name: mae
-
+    namespaces: #@ some_yaml()
 ---
 apiVersion: v1
 kind: ConfigMap
