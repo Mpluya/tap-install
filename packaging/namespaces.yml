@@ -25,19 +25,25 @@ spec:
   - ytt:
       ignoreUnknownComments: true
       valuesFrom:
-      - secretRef:
-          name: namespace-names
+      - configMapRef:
+          name: desired-namespaces
   deploy:
   - kapp: 
       rawOptions: 
       - --diff-changes=true
 ---
 apiVersion: v1
-kind: Secret
+kind: ConfigMap
 metadata:
-  name: namespace-names
-stringData:
-  values.yaml: #@ yaml.encode({ "namespaces": data.values.namespaces })
+  name: desired-namespaces
+  namespace: tap-install
+data:
+  namespaces.yaml: |
+    #@data/values 
+    ---
+    namespaces:
+    - name: justin
+    - name: mae
 ---
 apiVersion: v1
 kind: ConfigMap
