@@ -25,24 +25,19 @@ spec:
   - ytt:
       ignoreUnknownComments: true
       valuesFrom:
-      - configMapRef:
-          name: desired-namespaces
+      - secretRef:
+          name: namespace-names
   deploy:
   - kapp: 
       rawOptions: 
       - --diff-changes=true
 ---
 apiVersion: v1
-kind: ConfigMap
+kind: Secret
 metadata:
-  name: desired-namespaces
-  namespace: tap-install
-data:
-  namespaces.yaml: |
-    ---
-    namespaces:
-    - name: justin
-    - name: mae
+  name: namespace-names
+stringData:
+  values.yaml: #@ yaml.encode({ "namespaces": data.values.namespaces })
 ---
 apiVersion: v1
 kind: ConfigMap
@@ -53,9 +48,4 @@ metadata:
     kapp.k14s.io/create-strategy: fallback-on-update
     namespace-provisioner.apps.tanzu.vmware.com/no-overwrite: "" #! This annotation tells the provisioner app to not override this configMap as this is your desired state.
 data:
-  namespaces.yaml: |
-    #@data/values 
-    ---
-    namespaces:
-    - name: justin
-    - name: mae
+  namespaces.yaml: #@ yaml.encode({ "namespaces": data.values.namespaces })
