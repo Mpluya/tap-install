@@ -38,10 +38,7 @@ metadata:
   name: desired-namespaces
   namespace: tap-install
 data:
-  namespaces.yaml: |
-    #@data/values 
-    ---
-    namespaces: #@ "#@ {}".format(some_yaml())
+  namespaces.yaml: "#@ #@data/values\n---\nnamespaces:\n#@ some_yaml()"
 ---
 apiVersion: v1
 kind: ConfigMap
