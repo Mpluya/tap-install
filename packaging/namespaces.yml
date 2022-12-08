@@ -37,13 +37,13 @@ kind: ConfigMap
 metadata:
   name: desired-namespaces
 data:
-  namespaces.yaml: #@ yaml.encode({"namespaces": data.values.namespaces })
----
-#@data/values 
----
-namespaces:
-- name: justin
-- name: mae
+  namespaces.yaml: |
+    #@data/values 
+    ---
+    namespaces:
+    - name: justin
+    - name: mae
+
 ---
 apiVersion: v1
 kind: ConfigMap
