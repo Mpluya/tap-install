@@ -1,17 +1,7 @@
-#@ load("@ytt:yaml", "yaml")
-#@ load("@ytt:data", "data")
-
+#@data/values
 ---
-
-#@ def namespaces():
-- justin
-- mae
-#@ end
-
----
-#@ def config():
 namespaces:
-#@ for val in namespaces():
-- name: #@ val
-#@ end
-#@ end
+- name: justin
+  language: java
+- name: mae
+  language: java
