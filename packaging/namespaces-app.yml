@@ -23,7 +23,8 @@ spec:
           #@ end
   template:
   - ytt:
-      ignoreUnknownComments: true
+      paths:
+      - namespace-provisioner
       valuesFrom:
       - configMapRef:
           name: tenants
