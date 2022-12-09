@@ -8,6 +8,11 @@ metadata:
 spec:
   serviceAccountName: tap-install-gitops-sa
   fetch:
+  - git:
+      url: ssh://git@github.com/Mpluya/tap-install
+      ref: origin/1.4
+      secretRef: 
+        name: tap-install-gitops-ssh-external-secret
   - inline:
       paths:
         config.yaml: |
