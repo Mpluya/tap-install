@@ -8,35 +8,21 @@ metadata:
 spec:
   serviceAccountName: tap-install-gitops-sa
   fetch:
-  - inline:
-      paths:
-        config.yaml: |
-          #@ load("@ytt:data", "data")
-          #@ for ns in data.values.namespaces:
-          ---
-          apiVersion: v1
-          kind: Namespace
-          metadata:
-            name: #@ ns.name
-          #@ end
+  - git:
+      url: ssh://git@github.com/Mpluya/tap-install
+      ref: origin/1.4
+      secretRef: 
+        name: tap-install-gitops-ssh-external-secret
   template:
   - ytt:
-      ignoreUnknownComments: true
+      paths:
+      - namespace-provisioner
       valuesFrom:
-      - configMapRef:
-          name: tenants
+      - secretRef:
+          name: tap-values-external-secret
   deploy:
   - kapp: 
-      rawOptions: 
-      - --diff-changes=true
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: tenants
-  namespace: tap-install
-data:
-  namespaces.yaml: #@ yaml.encode({ "namespaces": data.values.namespaces })
+      rawOptions: ["--dangerous-override-ownership-of-existing-resources=true"]
 ---
 apiVersion: v1
 kind: ConfigMap
