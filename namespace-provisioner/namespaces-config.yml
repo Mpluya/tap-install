@@ -1,9 +1,46 @@
-#@data/values
+#@ load("@ytt:yaml", "yaml")
+#@ load("@ytt:data", "data")
+
 ---
+
+#@ def namespaces():
+- justin
+- mae
+- aiden
+#@ end
+
+---
+#@ def namespace(name):
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: #@ name
+  labels:
+    apps.tanzu.vmware.com/tap-ns: ""
+#@ end
+
+---
+
+#@ for val in namespaces():
+--- #@ namespace(val)
+#@ end
+
+---
+#@ def config():
 namespaces:
-- name: justin
-  language: java
-- name: mae
-  language: java
-- name: aiden
-  language: java
+#@ for val in namespaces():
+- name: #@ val
+#@ end
+#@ end
+---
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: desired-namespaces
+  namespace: tap-namespace-provisioning
+  annotations:
+    kapp.k14s.io/create-strategy: fallback-on-update
+    namespace-provisioner.apps.tanzu.vmware.com/no-overwrite: "" #! This annotation tells the provisioner app to not override this configMap as this is your desired state.
+data:
+  namespaces.yaml: #@ '#@data/values' + "\n---\n" + yaml.encode(config())

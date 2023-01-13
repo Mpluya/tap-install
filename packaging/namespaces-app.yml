@@ -13,39 +13,16 @@ spec:
       ref: origin/1.4
       secretRef: 
         name: tap-install-gitops-ssh-external-secret
-  - inline:
-      paths:
-        config.yaml: |
-          #@ load("@ytt:data", "data")
-          #@ for ns in namespaces():
-          ---
-          apiVersion: v1
-          kind: Namespace
-          metadata:
-            name: #@ ns.name
-          labels:
-            apps.tanzu.vmware.com/tap-ns: ""
-          #@ end
   template:
   - ytt:
       paths:
       - namespace-provisioner
       valuesFrom:
-      - configMapRef:
-          name: tenants
+      - secretRef:
+          name: tap-values-external-secret
   deploy:
-  - kapp:
-      rawOptions:
-      - --dangerous-override-ownership-of-existing-resources=true
-      - --diff-changes=true
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: tenants
-  namespace: tap-install
-data:
-  namespaces.yaml: #@ yaml.encode({ "namespaces": data.values.namespaces })
+  - kapp: 
+      rawOptions: ["--dangerous-override-ownership-of-existing-resources=true"]
 ---
 apiVersion: v1
 kind: ConfigMap
@@ -56,4 +33,4 @@ metadata:
     kapp.k14s.io/create-strategy: fallback-on-update
     namespace-provisioner.apps.tanzu.vmware.com/no-overwrite: "" #! This annotation tells the provisioner app to not override this configMap as this is your desired state.
 data:
-  namespaces.yaml: #@ '#@data/values' + "\n---\n" + yaml.encode({ "namespaces": data.values.namespaces })
+  namespaces.yaml: #@ yaml.encode({"namespaces": data.values.namespaces })
